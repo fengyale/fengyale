@@ -1,55 +1,42 @@
 <div align="center">
 
-# Hi, I'm King Feng
+# Hi，我是 King Feng
 
-**Java 后端工程师 · 把 LLM / Agent / RAG / MCP 落到工程里**
+Java 后端工程师，关注 AI Agent、RAG、MCP 的工程化落地。
 
-[![GitHub](https://img.shields.io/badge/GitHub-fengyale-181717?style=flat-square&logo=github)](https://github.com/fengyale)
-[![Java](https://img.shields.io/badge/Java-21-007396?style=flat-square&logo=openjdk&logoColor=white)](https://openjdk.org/)
-[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.x-6DB33F?style=flat-square&logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
-[![MCP](https://img.shields.io/badge/Protocol-MCP-6E56CF?style=flat-square)](https://modelcontextprotocol.io/)
+[![GitHub followers](https://img.shields.io/github/followers/fengyale?label=Followers&style=social)](https://github.com/fengyale)
+![Java](https://img.shields.io/badge/Java-ED8B00?logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-6DB33F?logo=springboot&logoColor=white)
+![LangChain4j](https://img.shields.io/badge/LangChain4j-1C3C3C)
+![MCP](https://img.shields.io/badge/MCP-5A45FF)
 
 </div>
 
-## 我是谁
+## 简介
 
-Java 后端工程师，日常写 Spring Boot 服务。最近把主要精力放在大模型工程落地上：不做只停在对话界面的 demo，而是把 Agent、RAG、MCP 做成能在**内网环境真实运行**、并且有明确安全边界的工具。
+有 Java 后端背景，正在把大模型能力做成可运行的工程：Agent 流程编排、本地知识库 RAG，以及让 LLM 直接操作数据库 / Redis / GitLab 的 MCP 工具。关注点不在模型本身，而在"能不能稳定跑在真实环境里"——包括内网离线、权限边界、可检查与可追溯。
 
-判断标准一直很朴素：能不能不依赖外网跑起来、能不能把只读边界守住、能不能在断网机器上拷过去就工作。
+## Currently Focused On
 
-## 当前在做什么
+- **Agent 工程化**：决策可行性分析、研究型 Agent 的流程编排与结果收敛
+- **RAG 全链路**：文档切分、向量检索、召回重排到答案生成的完整链路
+- **MCP 工具与内网落地**：自研 MCP Server，让模型在离线内网安全调用数据库、缓存与代码平台
 
-**Agent 工程化**
-把决策分析、深度调研这类开放流程拆成可执行的状态机，用调用预算和断言约束模型行为，而不是让它自由发挥。
+## Featured Projects
 
-**RAG 全链路**
-从文档切分、向量化、召回到重排完整搭一遍，记录每一步的取舍，而不是只调一个向量库。
-
-**MCP 工具层**
-让 AI 客户端能读写数据库、缓存和代码平台，同时用只读模式、SQL 白名单、token scope 三层把风险压住。
-
-## 主要项目
-
-| Project | 说明 | 技术栈 |
+| 项目 | 说明 | 技术栈 |
 | --- | --- | --- |
-| [kf-agent](https://github.com/fengyale/kf-agent) | 三个可独立运行又能互相引用的本地 Agent：决策分析、深度调研、知识库问答 | Java 21 · Spring Boot · LangChain4j |
-| [kf-mcp](https://github.com/fengyale/kf-mcp) | 三个自研 MCP Server：多库只读数据库、Redis 管理、GitLab 操作，适配内网离线环境 | Java · Python · Node.js |
-| [harness-bootstrap](https://github.com/fengyale/harness-bootstrap) | 把 AI 编码规范固化成可复用的 harness：规则、门禁、依据与闭环 | Skill · 工程规范 |
-| [kf-tool](https://github.com/fengyale/kf-tool) | 浏览器自动化与文档处理工具集 | Node.js · PowerShell |
-| [kf-skill](https://github.com/fengyale/kf-skill) | 可独立安装的技能集合 | Skill |
-| [kf-business](https://github.com/fengyale/kf-business) | 响应式企业官网静态站点示例 | HTML · Tailwind · GSAP |
+| [kf-agent](https://github.com/fengyale/kf-agent) | 三个 Spring Boot + LangChain4j Agent：决策分析 / 调研 / 知识库 RAG | Java、Spring Boot、LangChain4j |
+| [kf-mcp](https://github.com/fengyale/kf-mcp) | 三个自研内网 MCP Server：数据库只读 / Redis 缓存管理 / GitLab，支持离线使用 | Java、MCP、Python |
+| [harness-bootstrap](https://github.com/fengyale/harness-bootstrap) | 约束 AI 编码行为的工程化脚手架，把规则、校验、grounding 与闭环装进真实代码库 | PowerShell、Python |
+| [kf-tool](https://github.com/fengyale/kf-tool) | 个人工具集合，每个子目录是一个独立可用的工具，含基于 CDP 的浏览器自动化 | Python |
+| [kf-skill](https://github.com/fengyale/kf-skill) | 可独立安装的 AI 技能集合，一个子目录即一个技能 | JavaScript |
+| [kf-business](https://github.com/fengyale/kf-business) | 企业官网静态站点模板，单页、响应式、含静态部署配置 | HTML5、Tailwind CSS |
 
-## 常用技术
+## Tech Stack
 
-`Java` `Spring Boot` `LangChain4j` `JDBC / MyBatis` `SQLite` `Redis` `MySQL` `Oracle` `SQL Server`
-`Python` `Node.js` `PowerShell` `Maven` `Git` `MCP`
+`Java` · `Spring Boot` · `LangChain4j` · `Python` · `Node.js` · `MCP` · `RAG` · `Redis` · `SQL`
 
-## 关注的方向
-
-- 后端工程化：Spring Boot、数据访问、服务可观测性
-- 大模型落地：Agent 编排、RAG 调优、MCP 工具设计
-- 内网与离线环境下的 AI 工具链
-
-## 联系方式
+## Connect
 
 - GitHub：[@fengyale](https://github.com/fengyale)
